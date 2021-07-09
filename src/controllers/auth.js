@@ -3,6 +3,7 @@ const User = require("../models/user");
 const { validationResult } = require("express-validator");
 const bcryptjs = require("bcryptjs");
 const passwordValidator = require("password-validator");
+const jwt = require("jsonwebtoken");
 
 exports.signup = async (req, res, next) => {
   const firstName = req.body.firstName;
@@ -55,6 +56,44 @@ exports.signup = async (req, res, next) => {
   } catch {
     const error = new Error(
       "A problem has occured while storing the user in the DB, we are working on solving it"
+    );
+    error.statusCode = 500;
+    return next(error);
+  }
+};
+
+exports.login = async (req, res, next) => {
+  const email = req.body.email;
+  const password = req.body.password;
+  let userFound;
+  try {
+    let userFound = await User.findOne({ email: email });
+    if (!userFound) {
+      const error = new Error("The user does not exist");
+      error.statusCode = 404;
+      return next(error);
+    }
+
+    const isEqual = await bcryptjs.compare(password, userFound.password);
+    if (!isEqual) {
+      const error = new Error("The password introduced is incorrect");
+      error.statusCode = 401;
+      return next(error);
+    }
+    const token = await jwt.sign(
+      {
+        id: userFound._id.toString(),
+        email: userFound.email,
+      },
+      "secretsecretsecret",
+      { expiresIn: "1h" }
+    );
+    res
+      .status(200)
+      .json({ message: "The user has been authenticated", token: token });
+  } catch {
+    const error = new Error(
+      "A problem has occured in the DB, we are working on solving it"
     );
     error.statusCode = 500;
     return next(error);
