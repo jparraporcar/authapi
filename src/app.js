@@ -21,8 +21,10 @@ app.use(express.json());
 app.use(authRoutes);
 
 app.use((error, req, res, next) => {
-  const status = error.statusCode;
-  const message = error.message;
+  const status = error.statusCode || 500;
+  const message =
+    error.message ||
+    "A problem has occured while storing the user in the DB, we are working on solving it";
   const data = error.data;
   res.status(status).json({ message: message, errorData: data });
 });
