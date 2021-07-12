@@ -27,10 +27,5 @@ _It is necessary to create a .env file to define all the enviromental variables 
 
 ###### Development pending tasks for /signup
 
-- [] Adding sanitization of body fields
-- [] Sending a confirmation email to the user when this user has succesfully signed up
-
-###### Development pending tasks for /login
-
--[] Adding OAuth 2.0 authentication flow
--[] Adding a middleware specifically to assess that the incoming request has a valid token included in the _authorization_ header
+- Adding sanitization of body fields
+- Sending a confirmation email to the user when this user has succesfully signed up
