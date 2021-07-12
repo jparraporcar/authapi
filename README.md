@@ -23,7 +23,7 @@ _It is necessary to create a .env file to define all the enviromental variables 
 ###### Handling of /GET request to /localhost:300/login (port number to be defined in .env file), using the features/packages below:
 
 - Assessment of password validity with bryptjs
-- Creation of a toke with jsonwebtoken [https://www.npmjs.com/package/jsonwebtoken]
+- Creation of a token with jsonwebtoken [https://www.npmjs.com/package/jsonwebtoken]
 
 ###### Development pending tasks for /signup
 
