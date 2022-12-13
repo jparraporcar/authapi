@@ -29,3 +29,5 @@ _It is necessary to create a .env file to define all the enviromental variables 
 
 - Adding sanitization of body fields
 - Sending a confirmation email to the user when this user has succesfully signed up
+
+![jwt](https://user-images.githubusercontent.com/17023422/207372339-53acb20e-7f17-47e3-ba2a-3744977a3d13.jpg)
