@@ -1,5 +1,3 @@
-# authAPI
-
 _It is necessary to create a .env file to define all the enviromental variables indicated below_
 
 - USER_NAME= xxx
