@@ -1,4 +1,4 @@
-# Project Name
+# AuthAPI
 
 ## Description
 
@@ -126,11 +126,15 @@ This project is implemented with the following technologies and libraries:
 ## Screenshoots
 
 <figure>
-  <img src="./screenshots/signup.png" alt="Login request">
   <figcaption>This is a screenshot of the signup request/response in Postman.</figcaption>
+  <br />
+  <img src="./screenshots/signup.png" alt="Login request">
 </figure>
-
+<br />
+<br />
+<br />
 <figure>
-  <img src="./screenshots/login.png" alt="Login Screen">
   <figcaption>This is a screenshot of the login request/response in Postman.</figcaption>
+  <br />
+  <img src="./screenshots/login.png" alt="Login Screen">
 </figure>
