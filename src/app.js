@@ -6,13 +6,8 @@ const mongoose = require("mongoose");
 
 // when installing sendgrid necessary to check all problems with dependencies in warnings of npm
 
-const {
-  userName,
-  userPassword,
-  defaultDb,
-  clusterName,
-  port,
-} = require("../config");
+const { userName, userPassword, Db, clusterName, port } = require("../config");
+console.log(require("../config"));
 
 const app = express();
 
@@ -32,11 +27,11 @@ app.use((error, req, res, next) => {
 ///Check for usability of Hemlet and other express security recommendations
 
 mongoose
-  .connect(
-    `mongodb+srv://${userName}:${userPassword}@${clusterName}/${defaultDb}`,
-    { useNewUrlParser: true, useUnifiedTopology: true }
-  )
+  .connect(`mongodb+srv://${userName}:${userPassword}@${clusterName}/${Db}`, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then((result) => {
-    // console.log(result);
+    console.log(result);
     app.listen(port);
   });
