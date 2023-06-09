@@ -123,7 +123,7 @@ This project is implemented with the following technologies and libraries:
 
 10. **nodemon**: A utility that will monitor for any changes in your source and automatically restart your server. This is used in a development environment.
 
-## Screenshoots
+## Screenshots
 
 <figure>
   <figcaption>This is a screenshot of the signup request/response in Postman.</figcaption>
@@ -138,3 +138,13 @@ This project is implemented with the following technologies and libraries:
   <br />
   <img src="./screenshots/login.png" alt="Login Screen">
 </figure>
+
+## Contact
+
+If you want to contact me you can reach me at:
+
+- **Name**: `Jordi Parra Porcar`
+- **Email**: `jordiparraporcar@gmail.com`
+- **LinkedIn**: [`Jordi Parra Porcar`](https://www.linkedin.com/in/jordiparraporcar/)
+
+For any additional questions or comments, please feel free to reach out. Contributions, issues, and feature requests are welcome!
