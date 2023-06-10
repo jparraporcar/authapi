@@ -1,14 +1,14 @@
-# AuthAPI
+# authapi
 
 ## Description
 
-AuthAPI is a robust and secure back-end service, built using Node.js and Express.js, primarily designed to facilitate part of a JSON Web Token (JWT) authentication workflow.
+authapi is a robust and secure back-end service, built using Node.js and Express.js, primarily designed to facilitate part of a JSON Web Token (JWT) authentication workflow.
 
 This API provides multiple endpoints for user management and authentication:
 
 - **User Registration**: The user registration endpoint allows new users to sign up by making a POST request with their credentials. The user's password is securely hashed using bcryptjs before it is stored in a MongoDB Atlas database.
 
-- **User Login**: The user login endpoint facilitates existing users to authenticate themselves. Upon successful authentication, the server responds with a token, generated using the jsonwebtoken JavaScript package. This token can be used for subsequent authenticated requests to the server.
+- **User Login**: The user login endpoint facilitates existing users to authenticate themselves. Upon successful authentication, the server responds with a token, generated using the jsonwebtoken JavaScript package.
 
 The application uses mongoose to model the user data and interact with the MongoDB Atlas service. Input validation on the server-side is performed using the express-validator package. Sensitive information, such as database credentials, is securely managed using the dotenv package.
 
