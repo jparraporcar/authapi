@@ -128,6 +128,7 @@ This project is implemented with the following technologies and libraries:
 <figure>
   <figcaption>This is a screenshot of the signup request/response in Postman.</figcaption>
   <br />
+  <br />
   <img src="./screenshots/signup.png" alt="Login request">
 </figure>
 <br />
@@ -136,6 +137,7 @@ This project is implemented with the following technologies and libraries:
 <figure>
   <figcaption>This is a screenshot of the login request/response in Postman.</figcaption>
   <br />
+  <br /> 
   <img src="./screenshots/login.png" alt="Login Screen">
 </figure>
 
